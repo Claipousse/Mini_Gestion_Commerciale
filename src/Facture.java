@@ -29,15 +29,19 @@ public class Facture {
     public int getId() {
         return id;
     }
-    public void getDate(String date) {
+
+    public String getDate(String date) {
         this.date = date;
     }
+
     public Client getClient() {
         return client;
     }
+
     public ArrayList<Produit> getProduits() {
         return produits;
     }
+
     public ArrayList<Integer> getQuantites() {
         return quantites;
     }
@@ -46,15 +50,19 @@ public class Facture {
     public void setId(int id) {
         this.id = id;
     }
+
     public void setDate(String date) {
         this.date = date;
     }
+
     public void setClient(Client client) {
         this.client = client;
     }
+
     public void setProduits(ArrayList<Produit> produits) {
         this.produits = produits;
     }
+
     public void setQuantites(ArrayList<Integer> quantites) {
         this.quantites = quantites;
     }
@@ -121,7 +129,7 @@ public class Facture {
     }
 
 
-        public static Facture fromFileFormat(String line, ArrayList<Client> clients, ArrayList<Produit> produits) {
+    public static Facture fromFileFormat(String line, ArrayList<Client> clients, ArrayList<Produit> produits) {
         String[] parts = line.split(";");
 
         // 1. Récupérer id, date
@@ -157,6 +165,9 @@ public class Facture {
                         facture.ajouterProduit(p, quantite);
                         break;
                     }
-
-
+                }
+            }
+        }
+        return facture;
+    }
 }

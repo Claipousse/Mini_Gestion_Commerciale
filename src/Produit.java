@@ -58,5 +58,9 @@ public class Produit {
 
         return new Produit(id, nom, prix);
     }
+
+    public String toFileFormat() {
+        return id + ";" + nom + ";" + prix;
+    }
 }
 

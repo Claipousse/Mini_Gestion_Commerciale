@@ -101,6 +101,10 @@ public class Client {
 
         return new Client(id, nom, prenom, email, adresse, codePostal, ville);
     }
+
+    public String toFileFormat() {
+        return id + ";" + nom + ";" + prenom + ";" + email + ";" + adresse + ";" + codepostal + ";" + ville;
+    }
 }
 
 
