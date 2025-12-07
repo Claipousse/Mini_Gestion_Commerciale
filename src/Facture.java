@@ -30,8 +30,8 @@ public class Facture {
         return id;
     }
 
-    public String getDate(String date) {
-        this.date = date;
+    public String getDate() {
+        return date;
     }
 
     public Client getClient() {
